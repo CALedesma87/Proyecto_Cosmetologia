@@ -14,7 +14,7 @@ public class ClienteView extends javax.swing.JPanel {
 
     public ClienteView() {
         this.clienteService = clienteService;
-        
+
         initComponents();
 
     }
@@ -357,7 +357,6 @@ public class ClienteView extends javax.swing.JPanel {
             // Guardar el cliente
             int idCliente = clienteService.guardar(nuevoCliente);
 
-           
             // Puedes mostrar un mensaje de éxito
             JOptionPane.showMessageDialog(this, "Cliente guardado con éxito. ID: " + idCliente, "Éxito", JOptionPane.INFORMATION_MESSAGE);
 
@@ -369,7 +368,6 @@ public class ClienteView extends javax.swing.JPanel {
     }//GEN-LAST:event_jlGuardarMouseClicked
 
     private void jlSalirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jlSalirMouseClicked
-
     }//GEN-LAST:event_jlSalirMouseClicked
 
     private void jtDniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtDniActionPerformed

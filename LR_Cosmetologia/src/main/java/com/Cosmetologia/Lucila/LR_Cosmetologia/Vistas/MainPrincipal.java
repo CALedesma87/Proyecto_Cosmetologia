@@ -15,6 +15,7 @@ import javax.swing.Timer;
 public class MainPrincipal extends javax.swing.JFrame {
 
     ClienteView clienteView = new ClienteView();
+    TratamientoView tratamientoView = new TratamientoView();
     CardLayout vista;
 
     public MainPrincipal() {
@@ -141,6 +142,11 @@ public class MainPrincipal extends javax.swing.JFrame {
         jLabel5.setFont(new java.awt.Font("Arial Black", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("TRATAMIENTO");
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -259,6 +265,14 @@ public class MainPrincipal extends javax.swing.JFrame {
         SwingUtilities.updateComponentTreeUI(this);
         this.repaint();
     }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+        // TODO add your handling code here:
+        JpVistaPrincipal.add(tratamientoView, "tratamiento");
+        vista.show(JpVistaPrincipal, "tratamiento");
+        SwingUtilities.updateComponentTreeUI(this);
+        this.repaint();
+    }//GEN-LAST:event_jLabel5MouseClicked
 
     /**
      * @param args the command line arguments

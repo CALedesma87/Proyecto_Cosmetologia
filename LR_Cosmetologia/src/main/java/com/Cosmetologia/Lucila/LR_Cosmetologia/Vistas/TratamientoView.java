@@ -4,18 +4,17 @@
  */
 package com.Cosmetologia.Lucila.LR_Cosmetologia.Vistas;
 
-/**
- *
- * @author Usuario
- */
+import javax.swing.SwingUtilities;
 public class TratamientoView extends javax.swing.JPanel {
 
-    /**
-     * Creates new form TratamientoView
-     */
+     private MainPrincipal principal = new MainPrincipal(); // Declarar una variable para almacenar la instancia de MainPrincipal
+        principal = (MainPrincipal) SwingUtilities.getWindowAncestor(this).getRootPane().getParent(); // Obtener la instancia de MainPrincipal
+ 
+  
     public TratamientoView() {
         initComponents();
-    }
+        
+          }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -100,6 +99,11 @@ public class TratamientoView extends javax.swing.JPanel {
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel10.setText("SALIR");
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel12Layout = new javax.swing.GroupLayout(jPanel12);
         jPanel12.setLayout(jPanel12Layout);
@@ -128,7 +132,6 @@ public class TratamientoView extends javax.swing.JPanel {
         jLabel14.setForeground(new java.awt.Color(102, 0, 102));
         jLabel14.setText("Descripcion:");
 
-        jtDescripcion.setBackground(new java.awt.Color(255, 255, 255));
         jtDescripcion.setColumns(20);
         jtDescripcion.setRows(5);
         jtDescripcion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 204)));
@@ -145,7 +148,6 @@ public class TratamientoView extends javax.swing.JPanel {
         jdcFecha.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jdcFecha.setForeground(new java.awt.Color(255, 153, 255));
 
-        jcbTipoTrat.setBackground(new java.awt.Color(255, 255, 255));
         jcbTipoTrat.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
         jcbTipoTrat.setForeground(new java.awt.Color(102, 0, 102));
         jcbTipoTrat.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccione opcion..." }));
@@ -155,7 +157,6 @@ public class TratamientoView extends javax.swing.JPanel {
             }
         });
 
-        jtCliente.setBackground(new java.awt.Color(255, 255, 255));
         jtCliente.setFont(new java.awt.Font("Arial Black", 1, 10)); // NOI18N
         jtCliente.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
@@ -246,9 +247,7 @@ public class TratamientoView extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel14)
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jdcFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(136, 136, 136)))
+                    .addComponent(jdcFecha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(43, 43, 43)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -275,6 +274,11 @@ public class TratamientoView extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jcbTipoTratActionPerformed
 
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_jLabel10MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel10;
@@ -284,10 +288,8 @@ public class TratamientoView extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
